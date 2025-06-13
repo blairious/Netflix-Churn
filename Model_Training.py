@@ -1,6 +1,7 @@
 #Class that trains model on data.
 import pandas as pd
 from xgboost import XGBClassifier
+from sklearn.ensemble import StackingClassifier
 from sklearn.model_selection import train_test_split, RandomizedSearchCV
 from sklearn.metrics import f1_score, roc_auc_score
 
@@ -46,7 +47,7 @@ base_model = XGBClassifier(
 rs = RandomizedSearchCV(
     base_model,
     param_distributions=param_dist,
-    n_iter=50,
+    n_iter=100,
     scoring='roc_auc',
     cv=5,
     verbose=1,

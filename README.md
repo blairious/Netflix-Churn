@@ -3,7 +3,7 @@ Practice AI Model training that takes synthetic user information and projects wh
 
 ## Main Program - main.py
 
-This is the main program to run the prediction software. It uses a Streamlit web ui to take in a single user's data and uses the model to predict whether or not a user will leave the platform. This program will also show suggested measures to prevent the user from leaving, as well as a graph outlining the top contributing factors to its decision.
+This is the main program to run the prediction software. It uses a Streamlit web ui to take in a single user's data and uses the model to predict whether or not a user will leave the platform. This program will also show suggested measures to prevent the user from leaving, as well as a graph outlining the top contributing factors to its decision based on SHAP values.
 
 ## Training Script - model_training.py
 

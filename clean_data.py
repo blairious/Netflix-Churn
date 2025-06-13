@@ -26,8 +26,8 @@ df['Usage_Ratio'] = (df['Watch_Time_Hours'] + 1) / df['Loyalty']
 df['Churn_Flag'] = ((df['Last_Login'] < churnpoint) & (df['Usage_Ratio'] < 0.13)).astype(int)
 
 #Iterates through user who have Churn_Flag 1 and is from the USA, UK, or Japan, this gives them a 75% chance of having Churn_Flag 0.
-mask = (df['Churn_Flag'] == 1) & (df['Country'].isin(['USA', 'UK', 'Japan']))
-df.loc[mask, 'Churn_Flag'] = np.random.choice([0, 1], size=mask.sum(), p=[0.75, 0.25])
+mask = (df['Churn_Flag'] == 1) & (df['Country'].isin(['USA', 'UK', 'Japan', 'Canada']))
+df.loc[mask, 'Churn_Flag'] = np.random.choice([0, 1], size=mask.sum(), p=[0.90, 0.10])
 
 #Saves updated data
 df.to_csv('netflix_users.csv', index=False)
