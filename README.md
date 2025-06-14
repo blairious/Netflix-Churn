@@ -1,11 +1,11 @@
-# Netflix_Churn
+# Netflix Churn
 Practice AI Model training that takes synthetic user information and projects whether or not the user is likely to leave the platform.
 
 ## Main Program - main.py
 
 This is the main program to run the prediction software. It uses a Streamlit web ui to take in a single user's data and uses the model to predict whether or not a user will leave the platform. This program will also show suggested measures to prevent the user from leaving, as well as a graph outlining the top contributing factors to its decision based on SHAP values.
 
-## Training Script - model_training.py
+## Training Script - Model_Training.py
 
 This script handle model training, based on the available dataset. This script uses XGClassifier to train. It also outputs scores for model accuracy, based on F1 and ROC-AUC.
 
