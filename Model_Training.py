@@ -32,7 +32,7 @@ param_dist = {
     'subsample': [0.6, 0.8, 1.0],
     'colsample_bytree': [0.6, 0.8, 1.0],
     'alpha': [0, 0.5, 1],         
-    'reg_lambda': [1, 2],    
+    'reg_lambda': [0.5, 1, 2],    
     'scale_pos_weight': [1, 2, 3]
 }
 
